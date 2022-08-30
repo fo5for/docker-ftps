@@ -39,6 +39,7 @@ Comes with vsftpd installed and running in passive mode, with TLS support (self-
 | `FTPS_SSL_CERT`      | string | SSL certificate location.                                                                                                       | *None*                                                  |
 | `FTPS_SSL_KEY`       | string | SSL private key location.                                                                                                       | *None*                                                  |
 | `FTPS_WELCOME`       | string | Welcome message when people sign in to the server.                                                                              | "Welcome to the FTPS server."                           |
+| `FTPS_WRITE`         | 'YES' or 'NO' | Enable FTP write command.                                                                                                | "YES"                                                   |
 
 ## Licence
 

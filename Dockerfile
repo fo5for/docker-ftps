@@ -23,7 +23,9 @@ ENV \
     # SSL private location.
     FTPS_SSL_KEY= \
     # the welcome message when people sign in to the server
-    FTPS_WELCOME="Welcome to the FTPS server."
+    FTPS_WELCOME="Welcome to the FTPS server." \
+    # enable FTP write command
+    FTPS_WRITE="YES"
 
 COPY ./overlay /
 
