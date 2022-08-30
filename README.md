@@ -36,6 +36,8 @@ Comes with vsftpd installed and running in passive mode, with TLS support (self-
 | `FTPS_EXTERNAL_IP`   | string | The external IP of the server - required for passive mode (unless `FTPS_EXTERNAL_URI` is set).                                  | *None* - **required** unless `FTPS_EXTERNAL_URI` is set |
 | `FTPS_EXTERNAL_URI`  | string | The URI of the server - required for passive mode (unless `FTPS_EXTERNAL_IP` is set).<br>If both are set this takes precedence. | *None* - **required** unless `FTPS_EXTERNAL_IP` is set  |
 | `FTPS_SSL_BITS`      | string | The number of bits to use for the self-signed SSL certificate.                                                                  | 4096                                                    |
+| `FTPS_SSL_CERT`      | string | SSL certificate location.                                                                                                       | *None*                                                  |
+| `FTPS_SSL_KEY`       | string | SSL private key location.                                                                                                       | *None*                                                  |
 | `FTPS_WELCOME`       | string | Welcome message when people sign in to the server.                                                                              | "Welcome to the FTPS server."                           |
 
 ## Licence

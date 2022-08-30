@@ -18,6 +18,10 @@ ENV \
     FTPS_EXTERNAL_URI= \
     # the number of bits for the SSL certificate
     FTPS_SSL_BITS=4096 \
+    # SSL certificate location.
+    FTPS_SSL_CERT= \
+    # SSL private location.
+    FTPS_SSL_KEY= \
     # the welcome message when people sign in to the server
     FTPS_WELCOME="Welcome to the FTPS server."
 

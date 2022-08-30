@@ -128,12 +128,17 @@ listen=YES
 # sudo mkdir -p /etc/ssl/private
 # sudo openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout /etc/ssl/private/vsftpd.pem -out /etc/ssl/private/vsftpd.pem
 
+<% if [ -n "${FTPS_SSL_CERT-}" -o -n "${FTPS_SSL_KEY-}" ] ; then %>
+rsa_cert_file=<%= ${FTPS_SSL_CERT} %>
+rsa_private_key_file=<%= ${FTPS_SSL_KEY} %>
+<% else %>
 # We need to specify the location of our certificate
 # and key files. We actually combined both pieces of
 # information into a single file, so we will point
 # both options to the same file:
 rsa_cert_file=<%= ${FTPS_VSFTPD_CERT} %>
 rsa_private_key_file=<%= ${FTPS_VSFTPD_CERT} %>
+<% fi %>
 
 # Next, we need enable the use of these files and
 # disable anonymous users. We should also force the
